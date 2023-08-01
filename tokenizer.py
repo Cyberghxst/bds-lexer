@@ -27,7 +27,7 @@ class Tokenizer:
                 if i == len(mini_tokens) - 1 or "FUNCTION" in mini_tokens[i + 1]["type"]:
                     temp_token["type"] = "TEXT"
                     temp_token["content"] += token["value"]
-                    tokens.append(token)
+                    tokens.append(temp_token)
                     temp_token = {
                         "content": "",
                         "type": "Text"
